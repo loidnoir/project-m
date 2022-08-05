@@ -4,12 +4,13 @@ import * as dotenv from 'dotenv'
 dotenv.config()
 
 export default class Options {
+  public static clientGuild = '976623581603700746'
   public static clientToken: string = process.env.TOKEN!
   public static clientOptions: ClientOptions = {
     intents: [
       'Guilds',
       'GuildMembers',
-      'GuildWebhooks'
+      'GuildPresences'
     ],
     partials: [
       Partials.GuildMember,
