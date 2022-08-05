@@ -10,9 +10,5 @@ export default abstract class Event {
     this.type = type
   }
 
-  public abstract execute(client: MyClient, ...args: any[]): void
-
-  public async reloadEvents(client: MyClient): Promise<void> {
-    await client.handleEvents()
-  }
+  public abstract execute(client: MyClient, ...args: unknown[]): void
 }
