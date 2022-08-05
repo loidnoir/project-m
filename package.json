@@ -1,0 +1,30 @@
+{
+  "name": "project-m",
+  "version": "1.0.0",
+  "description": "Secret Noir's project called Project M",
+  "main": "src/index.ts",
+  "author": "Loid",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "@types/glob": "7.2.0",
+    "@types/node": "^18.6.4",
+    "@types/nodemon": "^1.19.2",
+    "discord.js": "^14.1.2",
+    "dotenv": "^16.0.1",
+    "eslint": "^8.21.0",
+    "glob": "7.2.0",
+    "nodemon": "^2.0.19",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.32.0"
+  },
+  "scripts": {
+    "start": "node build/index.js",
+    "build": "tsc --diagnostics",
+    "dev": "nodemon --watch src -e ts --exec ts-node -r dotenv/config ./src/index.ts"
+  }
+}
